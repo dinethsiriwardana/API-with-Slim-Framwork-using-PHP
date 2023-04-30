@@ -8,3 +8,5 @@ require __DIR__ . '/../Controller/UserController.php';
 $app->get('/users', [\UserController::class, 'showall']);
 $app->get('/users/{id}', [\UserController::class, 'byuser']);
 $app->post('/users/adduser', [\UserController::class, 'adduser']);
+$app->get('/users/delete/{id}', [\UserController::class, 'deleteuser']);
+$app->post('/users/update/{id}', [\UserController::class, 'updateuser']);
