@@ -20,7 +20,7 @@ class UserController
         $results = $sth->fetchAll(PDO::FETCH_ASSOC);
 
         $payload = json_encode($results);
-        // $response->getBody()->write($payload);
+        $response->getBody()->write($payload);
         return $response->withHeader('Content-Type', 'application/json');
     }
 

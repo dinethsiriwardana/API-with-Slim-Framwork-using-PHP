@@ -5,8 +5,8 @@ use Psr\Http\Message\ServerRequestInterface as Request;
 
 require __DIR__ . '/../Controller/UserController.php';
 
-$app->get('/users', [\UserController::class, 'showall']);
-$app->get('/users/{id}', [\UserController::class, 'byuser']);
-$app->post('/users/adduser', [\UserController::class, 'adduser']);
-$app->get('/users/delete/{id}', [\UserController::class, 'deleteuser']);
-$app->post('/users/update/{id}', [\UserController::class, 'updateuser']);
+$app->get('/', [\UserController::class, 'showall']);
+$app->get('/user/{id}', [\UserController::class, 'byuser']);
+$app->post('/adduser', [\UserController::class, 'adduser']);
+$app->get('/delete/{id}', [\UserController::class, 'deleteuser']);
+$app->post('/update/{id}', [\UserController::class, 'updateuser']);
